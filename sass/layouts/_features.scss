@@ -1,0 +1,28 @@
+.pic-list {
+  display: flex;
+  column-gap: 30px;
+}
+
+.pic-list__item {
+  max-width: 270px;
+}
+
+.pic-list__icon {
+  padding: 25px 100px;
+  border-radius: 4px;
+
+  background-color: var(--features-icon-bgc);
+}
+
+.pic-list__list-title {
+  @include font(700, 14px, 1.14, null);
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  margin-top: 30px;
+}
+
+.pic-list__text {
+  line-height: 1.71;
+
+  color: var(--main-text-color);
+}

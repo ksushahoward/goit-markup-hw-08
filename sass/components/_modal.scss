@@ -1,0 +1,217 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  transition: opacity, visibility;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  background-color: var(--backdrop-color);
+}
+
+.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  padding: 40px;
+
+  width: 528px;
+  min-height: 581px;
+  border-radius: 4px;
+  background-color: #ffffff;
+
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  .backdrop.is-hidden & {
+    transform: translate(-50%, -50%) scale(0);
+  }
+}
+
+.modal__btn {
+  position: absolute;
+
+  @extend %align-justify-center;
+
+  right: 8px;
+  top: 8px;
+
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid var(--close-btn-border);
+  background-color: #ffffff;
+
+  transition: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    fill: var(--accent-color);
+  }
+}
+
+.modal__btn-icon {
+  width: 11px;
+  height: 11px;
+  background-color: #ffffff;
+}
+
+.modal__title {
+  @include font(700, 20px, 1.15, 0.03em);
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.modal__form .modal__input-field:nth-child(-n + 3) {
+  margin-bottom: 10px;
+}
+
+.modal__input-field:nth-child(4) {
+  margin-bottom: 20px;
+}
+
+.modal__form-label {
+  display: block;
+  margin-bottom: 4px;
+
+  color: var(--main-text-color);
+  @include font(400, 12px, 1.17, 0.01em);
+}
+
+.modal__input-wrap {
+  position: relative;
+}
+
+.modal__form-input {
+  width: 100%;
+  height: 40px;
+  border: 1px solid var(--input-border-color);
+  border-radius: 4px;
+
+  padding-left: 42px;
+
+  transition: outline-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  &:focus {
+    outline-color: var(--accent-color);
+  }
+}
+
+.modal__input-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  transition: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  .modal__form-input:focus + & {
+    fill: var(--accent-color);
+  }
+}
+
+.modal__text {
+  width: 100%;
+  height: 120px;
+  border-radius: 4px;
+  border: 1px solid var(--input-border-color);
+  resize: none;
+
+  padding: 12px 16px;
+
+  transition: outline-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  &:focus {
+    outline-color: var(--accent-color);
+  }
+  &::placeholder {
+    @include font(400, 12px, 1.17, 0.01em);
+    color: var(--placeholder-color);
+  }
+}
+
+.modal__checkbox-field {
+  @extend %justify-center;
+}
+
+.modal__label-text {
+  @include font(400, 14px, 1.71, 0.03em);
+
+  color: var(--main-text-color);
+}
+
+.modal__check-text {
+  @extend %align-center;
+}
+
+.modal__check-icon {
+  width: 16px;
+  height: 15px;
+  border: 2px solid var(--dark-bgc);
+  border-radius: 3px;
+
+  margin-right: 8px;
+
+  @extend %align-justify-center;
+
+  transition: background-color, border;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal__icon-check {
+  fill: transparent;
+}
+
+.modal__input-check:checked + .modal__check-text .modal__check-icon {
+  background-color: var(--accent-color);
+  border: transparent;
+}
+
+.modal__input-check:checked + .modal__check-text .modal__icon-check {
+  fill: var(--footer-icon-color);
+}
+
+.modal__input-link {
+  font-family: 'Roboto' sans-serif;
+  font-style: normal;
+  @include font(400, 14px, 1.71, 0.03em);
+  text-decoration-line: underline;
+
+  margin-left: 5px;
+
+  color: var(--accent-color);
+
+  cursor: pointer;
+}
+
+.button__modal {
+  padding: 10px 55px;
+  margin-top: 30px;
+
+  color: var(--hero-title-color);
+  background-color: var(--accent-color);
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  &:hover,
+  &:focus {
+    background-color: var(--hero-btn-hover);
+  }
+}

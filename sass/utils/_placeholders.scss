@@ -1,0 +1,22 @@
+%align-center {
+  display: flex;
+  align-items: center;
+}
+
+%align-justify-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+%justify-center {
+  display: flex;
+  justify-content: center;
+}
+
+@mixin font($fw, $fs, $lh, $ls) {
+  font-weight: $fw;
+  font-size: $fs;
+  line-height: $lh;
+  letter-spacing: $ls;
+}

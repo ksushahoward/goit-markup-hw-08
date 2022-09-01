@@ -1,10 +1,23 @@
 .pic-list {
-  display: flex;
-  column-gap: 30px;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 30px;
+  }
 }
 
 .pic-list__item {
-  max-width: 270px;
+  width: 100%;
+  @media screen and (min-width: 768px) {
+    width: 354px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 270px;
+  }
+}
+
+.pic-list__item:not(:last-child) {
+  margin-bottom: 30px;
 }
 
 .pic-list__icon {
@@ -12,6 +25,7 @@
   border-radius: 4px;
 
   background-color: var(--features-icon-bgc);
+  text-align: center;
 }
 
 .pic-list__list-title {

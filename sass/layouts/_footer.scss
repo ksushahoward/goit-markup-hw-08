@@ -112,7 +112,6 @@
   @extend %align-justify-center;
 
   border-radius: 50%;
-  color: var(--footer-icon-color);
 
   transition-property: color, background-color;
   transition-duration: 250ms;
@@ -126,6 +125,7 @@
 
 .soc-list__link-footer {
   background-color: var(--footer-icon-bgc);
+  color: var(--footer-icon-color);
 }
 
 .soc-list__icon {

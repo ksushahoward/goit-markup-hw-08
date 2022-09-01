@@ -63,8 +63,14 @@ body {
 }
 
 .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+@media screen and (min-width: 1200px) {
+  .section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .border {
@@ -96,7 +102,7 @@ body {
   justify-content: center;
 }
 
-.card-list, .btn-list, .soc-list, .team-list, .modal__checkbox-field {
+.card-list, .btn-list, .soc-list, .modal__checkbox-field {
   display: flex;
   justify-content: center;
 }
@@ -118,10 +124,26 @@ button {
 }
 
 .container {
-  width: 1200px;
+  width: 100%;
   padding-left: 15px;
   padding-right: 15px;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
 }
 
 .backdrop {
@@ -481,20 +503,38 @@ button {
   background-color: var(--hero-btn-hover);
 }
 
-.pic-list {
-  display: flex;
-  -moz-column-gap: 30px;
-       column-gap: 30px;
+@media screen and (min-width: 768px) {
+  .pic-list {
+    display: flex;
+    flex-wrap: wrap;
+    -moz-column-gap: 30px;
+         column-gap: 30px;
+  }
 }
 
 .pic-list__item {
-  max-width: 270px;
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .pic-list__item {
+    width: 354px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .pic-list__item {
+    width: 270px;
+  }
+}
+
+.pic-list__item:not(:last-child) {
+  margin-bottom: 30px;
 }
 
 .pic-list__icon {
   padding: 25px 100px;
   border-radius: 4px;
   background-color: var(--features-icon-bgc);
+  text-align: center;
 }
 
 .pic-list__list-title {
@@ -553,22 +593,56 @@ button {
 
 .team__title {
   font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
+  font-size: 28px;
+  line-height: 1.18;
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 1200px) {
+  .team__title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    margin-bottom: 50px;
+  }
 }
 
-.team-list {
-  -moz-column-gap: 30px;
-       column-gap: 30px;
+@media screen and (min-width: 768px) {
+  .team-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
 }
 
 .team-list__item {
-  flex-basis: calc((100% - 90px) / 4);
   background-color: var(--team-card-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
+}
+@media screen and (min-width: 768px) {
+  .team-list__item {
+    flex-basis: calc((100% - 30px) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .team-list__item {
+    flex-basis: calc((100% - 90px) / 4);
+  }
+}
+
+.team-list__item:not(:last-child) {
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 768px) {
+  .team-list__item:not(:last-child) {
+    margin-bottom: 0;
+  }
+}
+
+.team-list__img {
+  width: 100%;
+  height: auto;
 }
 
 .team-list__title {
@@ -613,28 +687,45 @@ button {
   fill: currentColor;
 }
 
-.clients {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
-
 .clients__title {
-  margin-bottom: 50px;
   font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
+  font-size: 28px;
+  line-height: 1.18;
+  margin-bottom: 30px;
   text-align: center;
+}
+@media screen and (min-width: 1200px) {
+  .clients__title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    margin-bottom: 50px;
+  }
 }
 
 .clients-list {
   display: flex;
+  flex-wrap: wrap;
   gap: 30px;
+}
+
+.clients-list__item {
+  width: calc((100% - 30px) / 2);
+}
+@media screen and (min-width: 768px) {
+  .clients-list__item {
+    width: calc((100% - 60px) / 3);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .clients-list__item {
+    width: calc((100% - 150px) / 6);
+  }
 }
 
 .clients-list__link {
   box-sizing: border-box;
   display: flex;
-  width: 170px;
   height: 92px;
   border: 1px solid var(--clients-icon-color);
   border-radius: 4px;
@@ -752,7 +843,6 @@ button {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  color: var(--footer-icon-color);
   transition-property: color, background-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -764,6 +854,7 @@ button {
 
 .soc-list__link-footer {
   background-color: var(--footer-icon-bgc);
+  color: var(--footer-icon-color);
 }
 
 .soc-list__icon {

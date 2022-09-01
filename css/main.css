@@ -102,7 +102,7 @@ body {
   justify-content: center;
 }
 
-.card-list, .btn-list, .footer__form-text, .social__title, .adress__tel, .adress__email, .adress__link, .soc-list, .modal__checkbox-field {
+.card-list, .footer__form-text, .social__title, .adress__tel, .adress__email, .adress__link, .soc-list, .modal__checkbox-field {
   display: flex;
   justify-content: center;
 }
@@ -1016,10 +1016,17 @@ button {
 
 .btn-list {
   margin-bottom: 50px;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
 }
 
 .btn-list__item:not(:last-child) {
   margin-right: 8px;
+}
+
+.btn-list__item:nth-child(-n+3) {
+  margin-bottom: 15px;
 }
 
 .button__portfolio {
@@ -1045,6 +1052,10 @@ button {
   gap: 30px;
 }
 
+.card-list__item {
+  width: 100%;
+}
+
 .product-card {
   display: block;
   transition-property: box-shadow;
@@ -1053,6 +1064,10 @@ button {
 }
 .product-card:hover, .product-card:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.product-card__img {
+  width: 100%;
 }
 
 .product-card:hover .product-card__text-overlay,
@@ -1070,7 +1085,7 @@ button {
   bottom: 0;
   width: 100%;
   height: 100%;
-  padding: 63px 24px;
+  padding: 77px 24px;
   font-family: "Roboto";
   font-style: normal;
   font-weight: 400;

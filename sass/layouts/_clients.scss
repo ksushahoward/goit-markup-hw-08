@@ -7,7 +7,7 @@
   @include font(700, 28px, 1.18, null);
   margin-bottom: 30px;
   text-align: center;
-  @media screen and (min-width: 1200px) {
+  @include desktop {
     @include font(700, 36px, 1.17, null);
     margin-bottom: 50px;
   }
@@ -21,10 +21,10 @@
 
 .clients-list__item {
   width: calc((100% - 30px) / 2);
-  @media screen and (min-width: 768px) {
+  @include tablet {
     width: calc((100% - 60px) / 3);
   }
-  @media screen and (min-width: 1200px) {
+  @include desktop {
     width: calc((100% - 150px) / 6);
   }
 }

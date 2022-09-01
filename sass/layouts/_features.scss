@@ -1,5 +1,5 @@
 .pic-list {
-  @media screen and (min-width: 768px) {
+  @include tablet {
     display: flex;
     flex-wrap: wrap;
     column-gap: 30px;
@@ -8,10 +8,10 @@
 
 .pic-list__item {
   width: 100%;
-  @media screen and (min-width: 768px) {
+  @include tablet {
     width: 354px;
   }
-  @media screen and (min-width: 1200px) {
+  @include desktop {
     width: 270px;
   }
 }

@@ -102,7 +102,7 @@ body {
   justify-content: center;
 }
 
-.card-list, .btn-list, .soc-list, .modal__checkbox-field {
+.card-list, .btn-list, .footer__form-text, .social__title, .adress__tel, .adress__email, .adress__link, .soc-list, .modal__checkbox-field {
   display: flex;
   justify-content: center;
 }
@@ -748,9 +748,11 @@ button {
   background-color: var(--dark-bgc);
 }
 
-.footer__container {
-  display: flex;
-  align-items: baseline;
+@media screen and (min-width: 1200px) {
+  .footer__container {
+    display: flex;
+    align-items: baseline;
+  }
 }
 
 .logo__span {
@@ -758,16 +760,46 @@ button {
 }
 
 .footer__soc-box {
-  display: flex;
-  align-items: baseline;
+  margin-bottom: 60px;
+}
+@media screen and (min-width: 768px) {
+  .footer__soc-box {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-left: 76px;
+    margin-right: 89px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer__soc-box {
+    justify-content: flex-start;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+.footer__contacts {
+  margin-bottom: 60px;
+}
+@media screen and (min-width: 768px) {
+  .footer__contacts {
+    margin-bottom: 0;
+  }
 }
 
 .footer-logo {
-  display: inline-block;
+  display: flex;
+  justify-content: center;
   padding: 0;
   line-height: 1.19;
   color: var(--hero-title-color);
   margin-bottom: 20px;
+}
+@media screen and (min-width: 1200px) {
+  .footer-logo {
+    display: block;
+  }
 }
 
 .adress__item:not(:last-child) {
@@ -775,7 +807,6 @@ button {
 }
 
 .adress__link {
-  display: inline-block;
   font-family: "Roboto", sans-serif;
   font-style: normal;
   font-size: 14px;
@@ -789,9 +820,13 @@ button {
 .adress__link:hover, .adress__link:focus {
   color: var(--accent-color);
 }
+@media screen and (min-width: 1200px) {
+  .adress__link {
+    display: block;
+  }
+}
 
 .adress__email {
-  display: inline-block;
   font-family: "Roboto", sans-serif;
   font-style: normal;
   font-size: 14px;
@@ -805,9 +840,13 @@ button {
 .adress__email:hover, .adress__email:focus {
   color: var(--accent-color);
 }
+@media screen and (min-width: 1200px) {
+  .adress__email {
+    display: block;
+  }
+}
 
 .adress__tel {
-  display: inline-block;
   font-family: "Roboto", sans-serif;
   font-style: normal;
   font-size: 14px;
@@ -821,9 +860,16 @@ button {
 .adress__tel:hover, .adress__tel:focus {
   color: var(--accent-color);
 }
+@media screen and (min-width: 1200px) {
+  .adress__tel {
+    display: block;
+  }
+}
 
-.footer__social {
-  margin-left: 70px;
+@media screen and (min-width: 1200px) {
+  .footer__social {
+    margin-left: 70px;
+  }
 }
 
 .social__title {
@@ -833,6 +879,11 @@ button {
   line-height: 1.14;
   text-transform: uppercase;
   color: var(--hero-title-color);
+}
+@media screen and (min-width: 1200px) {
+  .social__title {
+    display: block;
+  }
 }
 
 .soc-list {
@@ -861,8 +912,10 @@ button {
   fill: currentColor;
 }
 
-.form {
-  display: flex;
+@media screen and (min-width: 1200px) {
+  .form {
+    display: flex;
+  }
 }
 
 .footer__form {
@@ -878,9 +931,14 @@ button {
   color: var(--hero-title-color);
   margin-bottom: 20px;
 }
+@media screen and (min-width: 1200px) {
+  .footer__form-text {
+    display: block;
+  }
+}
 
 .form__input {
-  width: 358px;
+  width: 100%;
   height: 50px;
   background-color: transparent;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -888,6 +946,7 @@ button {
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   color: var(--footer-transparent);
   padding-left: 16px;
+  margin-bottom: 20px;
 }
 .form__input::-moz-placeholder {
   font-weight: 400;
@@ -910,14 +969,31 @@ button {
   letter-spacing: 0.03em;
   color: var(--footer-transparent);
 }
+@media screen and (min-width: 768px) {
+  .form__input {
+    width: 450px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .form__input {
+    width: 358px;
+  }
+}
 
 .button__footer {
   padding: 10px 32px;
   width: 200px;
   height: 50px;
-  margin-left: 12px;
   color: var(--hero-title-color);
   background-color: var(--accent-color);
+}
+@media screen and (min-width: 1200px) {
+  .button__footer {
+    margin-left: 12px;
+  }
 }
 .button__footer:hover, .button__footer:focus {
   background-color: var(--hero-btn-hover);

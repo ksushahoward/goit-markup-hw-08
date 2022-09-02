@@ -1,5 +1,9 @@
 .gallery {
-  padding-top: 0;
+  display: none;
+  @include desktop {
+    display: flex;
+    padding-top: 0;
+  }
 }
 
 .gallery__title {

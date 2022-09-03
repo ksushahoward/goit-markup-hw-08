@@ -1111,7 +1111,17 @@ button {
 }
 
 .card-list__item {
-  width: 100%;
+  width: 450px;
+}
+@media screen and (min-width: 768px) {
+  .card-list__item {
+    width: 354px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .card-list__item {
+    width: 370px;
+  }
 }
 
 .product-card {

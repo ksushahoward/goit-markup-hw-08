@@ -41,7 +41,13 @@
 }
 
 .card-list__item {
-  width: 100%;
+  width: 450px;
+  @include tablet {
+    width: 354px;
+  }
+  @include desktop {
+    width: 370px;
+  }
 }
 
 .product-card {

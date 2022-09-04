@@ -4,3 +4,71 @@
   right: 15px;
   background-color: transparent;
 }
+
+.mobile-menu {
+  position: fixed;
+  z-index: 1;
+  background-color: #ffffff;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+.mobile-menu__close-btn {
+  background-color: transparent;
+  display: flex;
+  margin-right: 0;
+  margin-left: auto;
+  margin-top: 21px;
+}
+
+.mobile-menu__nav-connect-soc-box {
+  display: flex;
+  flex-direction: column;
+}
+.mobile-menu__btn-icon {
+}
+.mobile-menu__navigation {
+}
+.mobile-menu__navigation-list {
+  margin-left: 25px;
+}
+
+.mobile-menu__navigation-item:not(:last-child) {
+  margin-bottom: 32px;
+}
+.mobile-menu__navigation-link {
+  @include font(500, 40px, 1.18, 0.02em);
+  color: var(--main-title-color);
+}
+
+.mobile-menu__connect-soc-box {
+  margin-top: auto;
+}
+.mobile-menu__connect-list {
+  margin-bottom: 64px;
+}
+.mobile-menu__connect-item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.mobile-menu__connect-tel {
+  @include font(500, 34px, 1.18, 0.02em);
+  color: var(--accent-color);
+}
+.mobile-menu__connect-email {
+  @include font(500, 24px, 1.17, 0.02em);
+  color: var(--main-text-color);
+}
+
+.mobile-menu__soc-list {
+  display: flex;
+  margin-bottom: 48px;
+}
+.mobile-menu__soc-item:not(:last-child) {
+  margin-right: 20px;
+}
+.mobile-menu__soc-link {
+  @include font(500, 18px, 1.22, 0.02em);
+  color: var(--accent-color);
+}

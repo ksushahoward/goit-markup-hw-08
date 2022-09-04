@@ -10,6 +10,10 @@
   color: var(--accent-color);
 }
 
+.navigation {
+  display: none;
+}
+
 .navigation__list {
   display: flex;
 }
@@ -64,7 +68,14 @@
 }
 
 .connect__list {
-  display: flex;
+  display: none;
+  @include tablet {
+    margin-left: 84px;
+  }
+  @include desktop {
+    display: flex;
+    margin-left: auto;
+  }
 }
 
 .connect__item:not(:last-child) {
@@ -82,6 +93,9 @@
   &:hover,
   &:focus {
     color: var(--accent-color);
+  }
+  @include tablet {
+    margin-bottom: 10px;
   }
 }
 

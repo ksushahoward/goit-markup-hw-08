@@ -1,18 +1,20 @@
 .hero {
+  @extend %align-justify-center;
   padding: 200px 0;
   background-color: #c4c4c4;
   background-image: var(--hero-bg-gradient), url(../images/hero-bg-mob.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  max-width: 1600px;
-  height: 600px;
+  max-width: 767px;
+  max-height: 400px;
   margin: 0 auto;
   @include retina {
     background-image: var(--hero-bg-gradient), url(../images/hero-bg-mob-2x.jpg);
   }
 
   @include tablet {
+    max-width: 1199px;
     background-image: var(--hero-bg-gradient), url(../images/hero-bg-tab.jpg);
     @include retina {
       background-image: var(--hero-bg-gradient),
@@ -21,6 +23,8 @@
   }
 
   @include desktop {
+    max-width: 1600px;
+    max-height: 600px;
     background-image: var(--hero-bg-gradient), url(../images/hero-bg-desk.jpg);
     @include retina {
       background-image: var(--hero-bg-gradient),

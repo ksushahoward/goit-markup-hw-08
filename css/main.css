@@ -665,9 +665,14 @@ button {
 
 .mobile-menu__soc-list {
   display: flex;
+  align-items: baseline;
   flex-wrap: wrap;
   margin-bottom: 48px;
   margin-left: 25px;
+}
+
+.mobile-menu__soc-item {
+  display: flex;
 }
 
 .mobile-menu__soc-item:nth-child(-n+2) {
@@ -675,7 +680,7 @@ button {
 }
 
 .mobile-menu__soc-item:not(:last-child) {
-  margin-right: 20px;
+  margin-right: 10px;
 }
 
 .mobile-menu__soc-link {
@@ -684,6 +689,17 @@ button {
   line-height: 1.22;
   letter-spacing: 0.02em;
   color: var(--accent-color);
+  display: flex;
+  align-items: center;
+}
+
+.mobile-menu__soc-item:not(:last-child)::after {
+  content: "";
+  display: inline-block;
+  width: 1px;
+  height: 22px;
+  background-color: var(--input-border-color);
+  margin-left: 10px;
 }
 
 .hero {

@@ -512,13 +512,18 @@ button {
 }
 @media screen and (min-width: 1200px) {
   .connect__list {
-    display: flex;
+    flex-direction: row;
     margin-left: auto;
   }
 }
 
 .connect__item:not(:last-child) {
   margin-right: 50px;
+}
+@media screen and (min-width: 1200px) {
+  .connect__item:not(:last-child) {
+    margin-right: 30px;
+  }
 }
 
 .connect__email {

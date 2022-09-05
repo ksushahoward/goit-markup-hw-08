@@ -78,13 +78,16 @@
     flex-direction: column;
   }
   @include desktop {
-    display: flex;
+    flex-direction: row;
     margin-left: auto;
   }
 }
 
 .connect__item:not(:last-child) {
   margin-right: 50px;
+  @include desktop {
+    margin-right: 30px;
+  }
 }
 
 .connect__email {

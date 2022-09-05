@@ -12,10 +12,14 @@
 
 .navigation {
   display: none;
+  @include tablet {
+    display: flex;
+  }
 }
 
 .navigation__list {
   display: flex;
+  margin-right: 69px;
 }
 
 .navigation__item {
@@ -70,7 +74,8 @@
 .connect__list {
   display: none;
   @include tablet {
-    margin-left: 84px;
+    display: flex;
+    flex-direction: column;
   }
   @include desktop {
     display: flex;

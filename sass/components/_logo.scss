@@ -3,6 +3,9 @@
   padding: 16px 0;
   font-family: 'Raleway', sans-serif;
   @include font(700, 24px, 1.16, 0.03em);
+  @include desktop {
+    @include font(700, 26px, 1.16, 0.03em);
+  }
 
   color: #000000;
 }

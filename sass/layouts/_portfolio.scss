@@ -127,6 +127,15 @@
   border-bottom: 1px solid var(--portfolio-border-color);
 }
 
+.product-card__infobox--padding {
+  @include tablet {
+    padding-bottom: 56px;
+  }
+  @include desktop {
+    padding-bottom: 20px;
+  }
+}
+
 .product-card__name {
   margin-bottom: 4px;
 

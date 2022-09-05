@@ -29,9 +29,8 @@
 
   padding: 40px;
 
-  // width: 528px;
-  // min-height: 581px;
   width: 290px;
+  height: 609px;
 
   border-radius: 4px;
   background-color: #ffffff;
@@ -40,6 +39,14 @@
     0px 2px 1px rgba(0, 0, 0, 0.2);
   .backdrop.is-hidden & {
     transform: translate(-50%, -50%) scale(0);
+  }
+  @include mobile {
+    width: 450px;
+    height: 609px;
+  }
+  @include desktop {
+    width: 528px;
+    height: 581px;
   }
 }
 
@@ -73,9 +80,15 @@
 }
 
 .modal__title {
-  @include font(700, 20px, 1.15, 0.03em);
+  @include font(700, 15px, 1.15, 0.03em);
   text-align: center;
   margin-bottom: 12px;
+  @include mobile {
+    @include font(700, 20px, 1.5, 0.03em);
+  }
+  @include desktop {
+    @include font(700, 20px, 1.15, 0.03em);
+  }
 }
 
 .modal__form .modal__input-field:nth-child(-n + 3) {
@@ -154,13 +167,20 @@
 }
 
 .modal__label-text {
-  @include font(400, 14px, 1.71, 0.03em);
+  @include font(400, 12px, 1.71, 0.03em);
 
   color: var(--main-text-color);
+  @include desktop {
+    @include font(400, 14px, 1.71, 0.03em);
+  }
 }
 
 .modal__check-text {
-  @extend %align-center;
+  display: flex;
+  align-items: baseline;
+  @include mobile {
+    align-items: center;
+  }
 }
 
 .modal__check-icon {
@@ -194,14 +214,17 @@
 .modal__input-link {
   font-family: 'Roboto' sans-serif;
   font-style: normal;
-  @include font(400, 14px, 1.71, 0.03em);
+  @include font(400, 12px, 1.71, 0.03em);
   text-decoration-line: underline;
 
-  margin-left: 5px;
+  margin-left: 1px;
 
   color: var(--accent-color);
 
   cursor: pointer;
+  @include desktop {
+    @include font(400, 14px, 1.71, 0.03em);
+  }
 }
 
 .button__modal {
